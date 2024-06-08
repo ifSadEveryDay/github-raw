@@ -1,16 +1,4 @@
-# CF-Workers-Raw：轻松访问GitHub私有仓库
-这个项目允许你通过Cloudflare Workers安全地访问GitHub私有仓库中的原始文件，无需直接暴露你的GitHub令牌。
-## 为什么需要这个工具？
-
-- 你有一些存储在GitHub私有仓库中的重要文件。
-- 你想直接通过URL访问这些文件的原始内容（比如配置文件、数据文件等）。
-- 但是，你不想在URL中直接暴露你的GitHub令牌，因为这可能会被他人滥用。
-
-我们的解决方案是使用Cloudflare Workers作为中间层，它替你安全地处理身份验证，让你可以安全地访问私有文件。
-## 如何使用？
-假设你的Cloudflare Workers项目部署在`raw.090227.xyz`，
-
-而你要访问的私有文件是`https://raw.githubusercontent.com/cmliu/CF-Workers-Raw/main/_worker.js`。
+你要访问的私有文件是`https://raw.githubusercontent.com/cmliu/CF-Workers-Raw/main/_worker.js`。
 
 ## 方法1：通过URL参数传递令牌
 最直接的方法是在URL中添加你的GitHub令牌作为参数：
